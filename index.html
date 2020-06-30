@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<head>
+
+    <title>Rock-Paper-Scissors Simulator</title>
+
+</head>
+
+<body>
+    
+    <script>
+
+        let _compAction;
+        let _playerAction;
+        
+        let _gameMatrix = [
+            [0,2,1],
+            [1,0,2],
+            [2,1,0]
+        ];
+
+        let _gameKey = {rock:0, paper:1, scissors:2};
+        let _reverseGameKey = ["rock", "paper", "scissors"];
+
+        let resultKey = ["It's a draw.", "You won this round, Congrats!", "You lose this round, sorry :(" ];
+
+        function computerPlay() {
+            return Math.round(Math.random()*2);
+            
+        }
+
+        function playRound() {
+
+            alert("Let's play Rock-Paper-Scisors! The results will be displayed on your Chrome Developer Console.");
+            
+            _playerAction = prompt("Please pick Rock, Paper or Scissors!");
+            _compAction = computerPlay();
+            _playerAction = _gameKey[_playerAction.toLowerCase()];
+
+
+            console.log(`The computer has chosen ${_reverseGameKey[_compAction]}.`);
+
+            let resultNum = _gameMatrix[_playerAction][_compAction];
+
+            console.log(resultKey[resultNum]);
+
+            
+        }
+
+        playRound();
+
+
+    </script>
+
+</body>
+
+</html>
