@@ -1,1 +1,1 @@
-A simple rock-paper-scissors simulator coded in Javascript. 
+A simple rock-paper-scissors simulator coded in Javascript without using any if statements. 
