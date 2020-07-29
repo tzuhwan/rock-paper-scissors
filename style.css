@@ -1,0 +1,38 @@
+
+
+body {
+    font-family: sans-serif;
+}
+
+
+.top-container {
+    min-height: 30vh;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-around;
+    
+    min-height: 50vh;
+}
+
+.play-container {
+    width: 40vh;
+    text-align: center;
+    
+}
+
+.result-container {
+    width: 40vh;
+    text-align: center;
+}
+
+#result {
+    padding-top: 100px;
+}
+
+
+

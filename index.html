@@ -4,54 +4,62 @@
 
     <title>Rock-Paper-Scissors Simulator</title>
 
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+
+    <div class="top-container">
+        <h1>Rock-Paper-Scissors Simulator</h1>
+        <h2 id='round'>Round 1</h2>    
+    </div>
+
+    <div class="main-container">
+        <div class="play-container">
+            <h3 class="score-header"> YOUR SCORE</h3>
+            <p id="player-score">0/3</p>
+            <div class="player-selection">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissors">Scissors</button>
+            </div>
+            <p>You Picked:</p>
+            <p id="player-choice"></p>
+        </div>
+
+        <div class="result-container">
+            <h2 id="result"></h2>
+        </div>
     
-    <script>
+        <div class="play-container">
+            <h3 class="score-header"> OPPONENT SCORE</h3>
+            <p id="opp-score">0/3</p>
+            <p id="opponent-status">Your Opponent is choosing...</p>
+            <p id="opponent-choice"></p>
+        </div>
+    </div>
 
-        let _compAction;
-        let _playerAction;
-        
-        let _gameMatrix = [
-            [0,2,1],
-            [1,0,2],
-            [2,1,0]
-        ];
-
-        let _gameKey = {rock:0, paper:1, scissors:2};
-        let _reverseGameKey = ["rock", "paper", "scissors"];
-
-        let resultKey = ["It's a draw.", "You won this round, Congrats!", "You lose this round, sorry :(" ];
-
-        function computerPlay() {
-            return Math.round(Math.random()*2);
-            
-        }
-
-        function playRound() {
-
-            alert("Let's play Rock-Paper-Scisors! The results will be displayed on your Chrome Developer Console.");
-            
-            _playerAction = prompt("Please pick Rock, Paper or Scissors!");
-            _compAction = computerPlay();
-            _playerAction = _gameKey[_playerAction.toLowerCase()];
+    
 
 
-            console.log(`The computer has chosen ${_reverseGameKey[_compAction]}.`);
-
-            let resultNum = _gameMatrix[_playerAction][_compAction];
-
-            console.log(resultKey[resultNum]);
-
-            
-        }
-
-        playRound();
 
 
-    </script>
+
+
+    
+    <script src="script.js"></script>
 
 </body>
 
 </html>
+
+
+<!-- 
+
+1. Create a main Div on top 
+2. Two sides
+3. Counter
+
+
+ -->
